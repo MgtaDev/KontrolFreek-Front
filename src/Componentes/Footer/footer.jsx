@@ -14,7 +14,7 @@ export default function Footer() {
                  para refrescar y saborizar tu vida
             </h1>
             <div className='right-side'>
-            <button className='bg-teal-400 hover:bg-teal-500 duration-300 px-5 py-2.5 font-sans rounded-md text-white md:w-auto w-full'>
+            <button className='bg-teal-400 hover:bg-teal-500 duration-300 px-5 py-2.5 font-sans rounded-md text-white md:w-auto'>
             Comprar
             </button>
         </div>

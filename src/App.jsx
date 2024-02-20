@@ -6,6 +6,10 @@ export default function App() {
   return (
     <body className='bg-gradient-to-t from-[#000000] to-[#a6c1ee] h-screen'>
     <Nav/>
+    <br /><br /><br />
+    <br /><br /><br />
+    <br /><br /><br />
+    <br /><br /><br />
     <Footer/>
     </body>
   )
