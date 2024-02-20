@@ -16,7 +16,7 @@ export default function Nav() {
             <div>
             <img src={logo} alt="logo-img" className='w-16 rounded-full' />
             </div>
-            <div className={`duration-500 md:static bg-[rgb(17,24,40)] absolute text-white md:min-h-fit min-h-[40vh] left-0 ${isMenuOpen ? 'top-[8.9%]' : 'top-[-100%]'} md:w-auto w-full flex items-center px-5`}>
+            <div className={`duration-500 md:static bg-[rgb(17,24,40)] absolute text-white md:min-h-fit min-h-[40vh] left-0 ${isMenuOpen ? 'top-[10%]' : 'top-[-100%]'} md:w-auto w-full flex items-center px-5`}>
                 <ul className='flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-6'>
                     <li>
                         <a className='hover:text-[#41a6ff]' href=''>Home</a>
