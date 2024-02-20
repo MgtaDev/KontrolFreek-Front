@@ -4,7 +4,7 @@ import Footer from './Componentes/Footer/footer'
 
 export default function App() {
   return (
-    <body className='bg-gradient-to-t from-[#000000] to-[#a6c1ee] h-screen'>
+    <body className='bg-gray-100 h-screen'>
     <Nav/>
     <br /><br /><br />
     <br /><br /><br />
