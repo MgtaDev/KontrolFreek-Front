@@ -13,40 +13,7 @@ export default function Products({title, data}) {
       const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
         <img src='https://raw.githubusercontent.com/ShravanMeena/clone-of-wanderon-website/b133a937cc66bf0121455513c1d21728e1b86ca0/src/assets/right-arrow.svg' alt="nextArrow" {...props} />
       );
-      var settings2 = {
-        dots: true,
-        infinite: false,
-        speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        initialSlide: 0,
-        responsive: [
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3,
-              infinite: true,
-              dots: true
-            }
-          },
-          {
-            breakpoint: 600,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2,
-              initialSlide: 2
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }
-        ]
-      };
+     
       var settings = {
         dots: true,
         infinite: false,
@@ -86,9 +53,9 @@ export default function Products({title, data}) {
     
   return (
     <>
-    <h2 className='text-4xl text-gray-600 text-center md:text-5xl mt-40 md:mt-60'>Nuestros Ice Pops</h2><div className="slider-container">
+    <h2 className='text-5xl text-gray-500 mx-10 text-center md:text-5xl mt-40 md:mt-60'>Nuestros Ice Pops</h2><div className="slider-container">
     {/* Desktop Slider */}
-    <div className="mt-8 md:mt- max-[600px]:hidden">
+    <div className="mt-4 ">
         <Slider {...settings} className="">
           {data.map((item, index) => {
             return (
@@ -99,10 +66,10 @@ export default function Products({title, data}) {
 
                 <img src={skimo1} alt="hero_img" />
               
-                <div className=" text-center text-1xl md:text-3xl">
+                <div className=" text-center  text-1xl md:text-3xl">
                   <p>Skimo Ice</p>
 
-                  <p>1.99$</p>
+                  <p className='text-gray-500'>1.99$</p>
                 </div>
 
 
@@ -112,31 +79,6 @@ export default function Products({title, data}) {
           })}
         </Slider>
     </div>
-     {/* Mobile slider */}
-     <div className="mt-4 md:mt-20 md:hidden">
-        <Slider {...settings2} className="">
-          {data.map((item, index) => {
-            return (
-              <div
-              className=""
-              key={index}>
-                
-
-                <img src={skimo1} alt="hero_img" className='' />
-              
-                <div className=" text-center text-2xl md:text-3xl">
-                  <p>Skimo Ice</p>
-
-                  <p>1.99$</p>
-                </div>
-
-
-                
-              </div>
-            );
-          })}
-        </Slider>
-     </div>
     </div>
       </>
     )
