@@ -11,7 +11,7 @@ export default function Nav() {
       }
 
   return (
-    <header className='bg-[rgb(255,255,255)] shadow-2xl '>
+    <header className='bg-[rgb(254,253,253)] shadow-2xl '>
         <nav className='flex justify-between items-center py-4 w-[92%] mx-auto' >
             <div>
             <h1 className='text-4xl font-semibold md:text-5xl text-pink-500'>SKIMO</h1>
