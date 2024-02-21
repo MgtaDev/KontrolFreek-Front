@@ -39,7 +39,7 @@ export default function Nav() {
                 </ul>
             </div>
             <div className='flex items-center gap-6'>
-                <button className='bg-pink-500 text-white px-5 py-2 rounded-full duration-300 hover:bg-[#1f71b8]'>
+                <button className='bg-pink-500 text-white px-5 py-2 rounded-full duration-300 hover:bg-pink-600'>
                     Comprar
                 </button>
                 <div onClick={onToggleMenu} className={`text-3xl bg-[#ffffff] border-2 border-pink-500 pt-2 px-2 rounded-lg cursor-pointer text-pink-500 md:hidden`}>
