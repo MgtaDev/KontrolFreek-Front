@@ -28,7 +28,7 @@ export default function Nav() {
                         <a className='hover:text-pink-500' href=''>Productos</a>
                     </li>
                     <li>
-                        <a className='hover:text-pink-500' href=''>Comic</a>
+                        <a className='hover:text-pink-500' href='/Player'>Comic</a>
                     </li>
                     <li>
                         <a className='hover:text-pink-500' href=''>SkimoFans</a>
