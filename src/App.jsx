@@ -32,13 +32,13 @@ export default function App() {
         <Route path="/Skimofans" element={<SkimoFans />} />
       </Routes>
       <button
-      className={`fixed bottom-6 right-5 bg-white border-red-600 w-[3.5rem] h-[3.4rem] bg-opacity-80 backdrop-blur-[0.5rem] border-2 border-opacity-40 shadow-2xl rounded-full flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all ${isDarkMode && '!bg-gray-900 !border-1 !border-gray-100 text-white'}`}
+      className={`fixed bottom-6 right-5 bg-white  w-[3.5rem] h-[3.4rem] bg-opacity-80 backdrop-blur-[0.5rem] border-2 border-opacity-40 shadow-2xl rounded-full flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all ${isDarkMode && '!bg-gray-900 !border-1 !border-gray-100 text-white'}`}
       onClick={()=> sendWhatsappMessage()}
     >
       <BsWhatsapp size={20} className={`${isDarkMode && 'text-white'} text-gray-500`} />
     </button>
       <button
-      className={`fixed bottom-6 left-5 bg-white border-red-600 w-[3.5rem] h-[3.4rem] bg-opacity-80 backdrop-blur-[0.5rem] border-2 border-opacity-40 shadow-2xl rounded-full flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all ${isDarkMode && '!bg-gray-900 !border-1 !border-gray-100 text-white'}`}
+      className={`fixed bottom-6 left-5 bg-white  w-[3.5rem] h-[3.4rem] bg-opacity-80 backdrop-blur-[0.5rem] border-2 border-opacity-40 shadow-2xl rounded-full flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all ${isDarkMode && '!bg-gray-900 !border-1 !border-gray-100 text-white'}`}
       onClick={()=> setisDarkMode(!isDarkMode)}
     >
       {isDarkMode === true ? <BsSun size={20} /> : <BsMoon size={20} />}
