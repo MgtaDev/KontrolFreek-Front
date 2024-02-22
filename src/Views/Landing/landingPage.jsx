@@ -2,6 +2,7 @@ import React from 'react'
 import Hero from '../../Componentes/Hero/hero'
 import Products from '../../Componentes/Productos/products'
 import ComicPromo from '../../Componentes/ComicPromo/comicPromo'
+import Faqs from '../../Componentes/Faqs/faqs'
 const productsData = [
   {url:"https://www.wanderon.in/triplist/meghalaya-road-trip/wanderon-meghalaya-1.jpg"},
   {url:"https://www.wanderon.in/triplist/bir-kasol-kheerganga/wanderon-kasol-1.jpg"},
@@ -18,6 +19,7 @@ export default function LandingPage() {
       <Hero/>
       <Products title="Productos" data={productsData}/>
       <ComicPromo/>
+      <Faqs/>
     </>
   )
 }
