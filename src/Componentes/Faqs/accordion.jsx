@@ -1,12 +1,15 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import DarkModeContext from '../../Context/darkModeContext'
 
 export default function Accordion({title, message}) {
 
     const [accordeonIsOpen, setaccordeonIsOpen] = useState(false)
+    const { isDarkMode } = useContext(DarkModeContext) 
+  
 
   return (
     <div className='py-0 '>
-    <button onClick={()=> setaccordeonIsOpen(!accordeonIsOpen)} className='flex bg-gray-100 shadow-xl py-2 md:py-3 items-center px-4 rounded-t-lg justify-between w-full'>
+    <button onClick={()=> setaccordeonIsOpen(!accordeonIsOpen)} className={`flex ${isDarkMode && 'bg-gray-200'} bg-gray-100 shadow-xl py-2 md:py-3 items-center px-4 rounded-t-lg justify-between w-full`}>
         <span className='text-left font-semibold text-gray-700 md:text-lg'>{title}</span>
         <svg
           className="fill-pink-500 shrink-0 ml-8"
@@ -34,7 +37,7 @@ export default function Accordion({title, message}) {
           />
         </svg>
     </button>
-    <div className={`grid overflow-hidden transition-all bg-gray-100 py-1 ${accordeonIsOpen ? 'md:pb-6' : ''}  rounded-b-lg px-4 duration-300 ease-in-out text-slate-600 text-sm
+    <div className={`grid overflow-hidden transition-all ${isDarkMode && 'bg-gray-200'} bg-gray-100 py-1 ${accordeonIsOpen ? 'md:pb-6' : ''}  rounded-b-lg px-4 duration-300 ease-in-out text-slate-600 text-sm
     ${accordeonIsOpen ? 'grid-rows-[1fr] opacity:100 ' : 'grid-rows-[0fr] opacity:0 '}`}>
 
         <div className='overflow-hidden' >{message}</div>

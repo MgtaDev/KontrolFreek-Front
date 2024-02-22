@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import skimo1 from '../../assets/Skimo4.jpeg'
+import DarkModeContext from '../../Context/darkModeContext';
 
   
 export default function Social({title, data}) {
+  const { isDarkMode } = useContext(DarkModeContext) 
     const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
         <img src='https://raw.githubusercontent.com/ShravanMeena/clone-of-wanderon-website/b133a937cc66bf0121455513c1d21728e1b86ca0/src/assets/left-arrow.svg' alt="prevArrow" {...props} />
       );
@@ -54,7 +56,7 @@ export default function Social({title, data}) {
     
   return (
     <>
-    <h2 className='text-5xl text-gray-500 mx-10  text-center md:text-6xl mt-20 md:mt-40'>Siguenos en Redes Sociales #SKIMO</h2><div className="slider-container">
+    <h2 className={`${isDarkMode && 'text-white'} text-5xl text-gray-500 mx-10  text-center md:text-6xl mt-20 md:mt-40`}>Siguenos en Redes Sociales #SKIMO</h2><div className="slider-container">
     {/* Desktop Slider */}
     <div className="mt-4 ">
         <Slider {...settings} className="">

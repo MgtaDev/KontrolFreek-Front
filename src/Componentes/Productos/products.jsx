@@ -1,13 +1,15 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import skimo1 from '../../assets/Skimo4.jpeg'
 import {FaArrowLeft, FaArrowRight} from 'react-icons/fa'
 import { easeIn } from 'framer-motion';
+import DarkModeContext from '../../Context/darkModeContext';
 
   
 export default function Products({title, data}) {
+  const { isDarkMode } = useContext(DarkModeContext) 
     const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
         <FaArrowLeft className='text-white' {...props} />
       );
@@ -56,7 +58,7 @@ export default function Products({title, data}) {
     
   return (
     <>
-    <h2 className='text-5xl text-gray-500 mx-10 text-center md:text-5xl mt-20 md:mt-60'>Nuestros Ice Pops</h2><div className="slider-container">
+    <h2 className={`text-5xl ${isDarkMode && 'text-white'} text-gray-500 mx-10 text-center md:text-5xl mt-20 md:mt-60'>Nuestros Ice Pops</h2><div className="slider-container`}>Nuestros Ice Pops</h2>
     {/* Desktop Slider */}
     <div className="mt-4 ">
         <Slider {...settings} className="">
@@ -72,7 +74,7 @@ export default function Products({title, data}) {
                 <div className=" text-center  text-1xl md:text-3xl">
                   <p>Skimo Ice</p>
 
-                  <p className='text-gray-500'>1.99$</p>
+                  <p className={`${isDarkMode && 'text-gray-200'} text-gray-500`}>1.99$</p>
                 </div>
 
 
@@ -81,7 +83,6 @@ export default function Products({title, data}) {
             );
           })}
         </Slider>
-    </div>
     </div>
       </>
     )

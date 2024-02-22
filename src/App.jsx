@@ -6,31 +6,48 @@ import LandingPage from './Views/Landing/landingPage'
 import SkimoFans from './Views/SkimoFans/skimofans';
 import {Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import WhatsappIcon from './assets/social.png'
+import DarkModeContext from './Context/darkModeContext';
+import { BsMoon, BsSun, BsWhatsapp } from "react-icons/bs";
 
 export default function App() {
   const location = useLocation()
   const [isZ, setisZ] = useState(false)
+  const [isDarkMode, setisDarkMode] = useState(false)
   const sendWhatsappMessage = () => {
     window.open("https://wa.me/584121968978", "_blank")
   };
+  
  
   return (
     <div>
+          <DarkModeContext.Provider value={{ isDarkMode, setisDarkMode }}>
+
+  
       {
             location.pathname !== "" ? <Nav isZ={isZ} setisZ={setisZ}/> : null
          }
       <Routes>
-        <Route exact path="/" element={<LandingPage/>} />
+        <Route exact path="/" element={<LandingPage />} />
         <Route path="/Player" element={<Player isZ={isZ} />} />
         <Route path="/Skimofans" element={<SkimoFans />} />
       </Routes>
-      <div className="flex fixed bottom-0 w-20 right-0 m-2 p-4 rounded-full cursor-pointer">
-            <img onClick={()=> sendWhatsappMessage()} className="w-20 hover:transform hover:scale-110" src={WhatsappIcon} alt=""/>
-      </div> 
+      <button
+      className={`fixed bottom-6 right-5 bg-white border-red-600 w-[3.5rem] h-[3.4rem] bg-opacity-80 backdrop-blur-[0.5rem] border-2 border-opacity-40 shadow-2xl rounded-full flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all ${isDarkMode && '!bg-gray-900 !border-1 !border-gray-100 text-white'}`}
+      onClick={()=> sendWhatsappMessage()}
+    >
+      <BsWhatsapp size={20} className={`${isDarkMode && 'text-white'} text-gray-500`} />
+    </button>
+      <button
+      className={`fixed bottom-6 left-5 bg-white border-red-600 w-[3.5rem] h-[3.4rem] bg-opacity-80 backdrop-blur-[0.5rem] border-2 border-opacity-40 shadow-2xl rounded-full flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all ${isDarkMode && '!bg-gray-900 !border-1 !border-gray-100 text-white'}`}
+      onClick={()=> setisDarkMode(!isDarkMode)}
+    >
+      {isDarkMode === true ? <BsSun size={20} /> : <BsMoon size={20} />}
+    </button>
      
       {
             location.pathname !== "" ? <Footer /> : null
          }
+      </DarkModeContext.Provider>
     </div>
   )
 }
