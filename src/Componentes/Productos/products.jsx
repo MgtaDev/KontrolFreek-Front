@@ -53,7 +53,7 @@ export default function Products({title, data}) {
     
   return (
     <>
-    <h2 className='text-5xl text-gray-500 mx-10 text-center md:text-5xl mt-40 md:mt-60'>Nuestros Ice Pops</h2><div className="slider-container">
+    <h2 className='text-5xl text-gray-500 mx-10 text-center md:text-5xl mt-20 md:mt-60'>Nuestros Ice Pops</h2><div className="slider-container">
     {/* Desktop Slider */}
     <div className="mt-4 ">
         <Slider {...settings} className="">
