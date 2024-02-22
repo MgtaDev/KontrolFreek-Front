@@ -33,7 +33,7 @@
      .slick-prev {
        margin-left: 3.2% ;
      }
-     .slick-slide img {
+     .slick-slide{
       /* Agrega el espacio deseado aquí */
       padding: 2rem;
     }

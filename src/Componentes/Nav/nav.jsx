@@ -4,10 +4,11 @@ import logo from '../../assets/Logo.jpeg'
 
 
 
-export default function Nav() {
+export default function Nav({isZ, setisZ}) {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const onToggleMenu = () => {
         setIsMenuOpen(!isMenuOpen)
+        setisZ(!isZ)
       }
 
   return (
@@ -16,25 +17,25 @@ export default function Nav() {
             <div>
             <h1 className='text-4xl font-semibold md:text-5xl text-pink-500'>SKIMO</h1>
             </div>
-            <div className={`duration-500 md:static bg-[rgb(255,255,255)] absolute text-gray-900 md:min-h-fit min-h-[40vh] left-0 ${isMenuOpen ? 'top-[10%]' : 'top-[-100%]'} md:w-auto w-full flex items-center px-5`}>
+            <div className={`duration-500 md:static bg-[rgb(255,255,255)] absolute text-gray-900 md:min-h-fit min-h-[40vh] left-0 ${isMenuOpen ? 'top-[8.2%]' : 'top-[-100%]'} md:w-auto w-full flex items-center px-5`}>
                 <ul className='flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-6'>
                     <li>
-                        <a className='hover:text-pink-500' href=''>Home</a>
+                        <a className='hover:text-pink-500' href='/'>Home</a>
                     </li>
                     <li>
-                        <a className='hover:text-pink-500' href=''>Nosotros</a>
+                        <a className='hover:text-pink-500' href='#about'>Nosotros</a>
                     </li>
                     <li>
-                        <a className='hover:text-pink-500' href=''>Productos</a>
+                        <a className='hover:text-pink-500' href='http://localhost:5173/#products'>Productos</a>
                     </li>
                     <li>
-                        <a className='hover:text-pink-500' href=''>Comic</a>
+                        <a className='hover:text-pink-500' href='/Player'>Comic</a>
                     </li>
                     <li>
-                        <a className='hover:text-pink-500' href=''>SkimoFans</a>
+                        <a className='hover:text-pink-500' href='/skimofans'>SkimoFans</a>
                     </li>
                     <li>
-                        <a className='hover:text-pink-500' href=''>Contacto</a>
+                        <a className='hover:text-pink-500' href='#contacto'>Contacto</a>
                     </li>
                 </ul>
             </div>
