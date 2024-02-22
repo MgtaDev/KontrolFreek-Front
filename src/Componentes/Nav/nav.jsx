@@ -10,6 +10,9 @@ export default function Nav({isZ, setisZ}) {
         setIsMenuOpen(!isMenuOpen)
         setisZ(!isZ)
       }
+      const sendWhatsappMessage = () => {
+        window.open("https://wa.me/584121968978", "_blank")
+      };
 
   return (
     <header className='bg-[rgb(254,253,253)] shadow-2xl '>
@@ -40,7 +43,7 @@ export default function Nav({isZ, setisZ}) {
                 </ul>
             </div>
             <div className='flex items-center gap-6'>
-                <button className='bg-pink-500 text-white px-5 py-2 rounded-full duration-300 hover:bg-pink-600'>
+                <button onClick={()=> sendWhatsappMessage()} className='bg-pink-500 text-white px-5 py-2 rounded-full duration-300 hover:bg-pink-600'>
                     Comprar
                 </button>
                 <div onClick={onToggleMenu} className={`text-3xl bg-[#ffffff] border-2 border-pink-500 pt-2 px-2 rounded-lg cursor-pointer text-pink-500 md:hidden`}>

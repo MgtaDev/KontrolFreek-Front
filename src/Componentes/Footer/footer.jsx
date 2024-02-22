@@ -5,7 +5,7 @@ import SocialIcons from './socialIcons'
 
 export default function Footer() {
   return (
-    <div className='bg-gray-50 mt-60 text-black'>
+    <div className='bg-gray-100 mt-60 text-black'>
         <hr  className=''/>
         <div className='md:flex md:justify-between md:items-center sm:px-12 px-4 bg-[#ffffffe0] py-7 '>
             <h1 className='lg:text-4xl text-3xl md:mb-0 mb-6 lg:leading-normal font-semibold md:w-2/5'>

@@ -11,7 +11,6 @@ const productsData = [
   {url:"https://www.wanderon.in/triplist/spiti-summer/wanderon-spiti-1.jpg"},
   {url:"https://www.wanderon.in/triplist/spiti-circuit-biking/wanderon-spiti-18.jpg"},
   {url:"https://www.wanderon.in/triplist/manali-leh-manali/wanderon-ladakh-1.jpg"},
-  
 ]  
 export default function LandingPage() {
   return (

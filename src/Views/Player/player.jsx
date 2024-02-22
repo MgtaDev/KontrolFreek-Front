@@ -46,8 +46,9 @@ function Player({isZ}) {
   return (
     <>
     <div className='md:mx-16 md:-mb-[8%] md:-mt-[7%] -mb-[8%] md:py-20'>
-      <h1 className='text-4xl font-semibold md:text-6xl md:mt-8  text-gray-700 mx-6 pt-8'>Capitulo 1</h1>
-      <p className='text-xl mx-6 md:mt-3 md:text-2xl'>Mira online las aventuras de #Skimo</p>
+      <h1 className='text-4xl font-semibold md:text-6xl md:mt-8  text-gray-700 mx-6 pt-8'>Las aventuras de Skimo</h1>
+      <p className='text-xl mt-2 mx-6 md:mt-3 md:text-2xl'>Mira online las aventuras de #Skimo</p>
+      <p className='text-xl mt-2 mx-6 md:mt-3 md:text-2xl'>Capitulo #1</p>
     </div>
     <div className={`${isZ ? 'max-[768px]:-z-10 ': ''}max-w-[1200px] h-[700px] w-full m-auto py-16 px-4 relative group`}>
         <div
