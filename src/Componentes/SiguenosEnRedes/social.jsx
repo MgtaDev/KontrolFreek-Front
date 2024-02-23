@@ -58,7 +58,7 @@ export default function Social({title, data}) {
     <>
     <h2 className={`${isDarkMode && 'text-white'} text-5xl text-gray-500 mx-10  text-center md:text-6xl mt-20 md:mt-40`}>Siguenos en Redes Sociales #SKIMO</h2><div className="slider-container">
     {/* Desktop Slider */}
-    <div className="mt-4 mb-20 ">
+    <div className="mt-4 pb-20 ">
         <Slider {...settings} className="">
           {data.map((item, index) => {
             return (
