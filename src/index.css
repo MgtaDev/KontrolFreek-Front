@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-  background-color: rgb(250, 250, 250);
-}
 
     *{
       @apply transition-colors
@@ -15,15 +12,15 @@ body{
     .slick-next,
     .slick-prev {
       padding: 14px;
-        width: 2vw;
+      margin: auto;
         height: 2vw;
         cursor: pointer;
         border: none;
         border-radius: 5vw;
-        background-color: rgb(234, 12, 164);
-        z-index: 99 !important;
+        background-color: rgb(236, 236, 236);
         box-shadow: rgb(35 35 35 / 50%) 0px 0px 20px 5px;
-        top: 40%;
+        top: 45%;
+        z-index: 99 !important;
         color: white;
         
     }
@@ -33,10 +30,10 @@ body{
     
     
      .slick-next {
-        margin-right: 3.2%;
+        margin-right: 8.2%;
      }
      .slick-prev {
-       margin-left: 3.2% ;
+       margin-left: 8.2% ;
      }
      .slick-slide{
       /* Agrega el espacio deseado aquí */

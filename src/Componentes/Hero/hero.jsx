@@ -1,12 +1,12 @@
 import React, { useContext, useState } from 'react'
-import skimo from '../../assets/Skimo2.jpeg'
+import skimo from '../../assets/Skimo4.jpeg'
 import DarkModeContext from '../../Context/darkModeContext'
 
 export default function Hero() {
   const { isDarkMode } = useContext(DarkModeContext) 
   return (
     <div className={` ${isDarkMode && 'text-white bg-gray-900'}`}>
-    <img src={skimo} className='md:w-full md:h-[600px]' alt="" />
+    <img src={skimo} className='md:w-full w-auto md:h-[600px]' alt="" />
     <div className='grid cols-1 md:grid-cols-2 md:mx-8 mt-5 md:mt-20'>
     <div className='mt-4  md:mt-8 md:mx-8'>
     <h2 className={`text-5xl ${isDarkMode && 'text-white'} text-gray-500 mx-4 mb-4 md:mx-0 text-center md:text-5xl md:text-left`}>Bienvenido a Skimo</h2>
