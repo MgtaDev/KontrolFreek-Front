@@ -56,7 +56,7 @@ function Productos({isZ}) {
   return (
     <div className={`${isDarkMode && 'bg-gray-900'}`}>
     <div className='md:mx-16 md:-mb-[8%] md:-mt-[7%] -mb-[8%] md:py-20'>
-      <h1 className={`${isDarkMode && 'text-white'} text-4xl font-semibold md:text-6xl md:mt-8  text-gray-700 mx-6 pt-8`}>Nuestros Productos</h1>
+      <h1 className={`${isDarkMode && 'text-white'} text-4xl font-semibold md:text-6xl md:mt-8  text-gray-400 mx-6 pt-8`}>Nuestros Productos</h1>
       <p className={`${isDarkMode && 'text-gray-300'} text-xl mt-2 mx-6 md:mt-3 md:text-2xl`}>Consulta nuestros productos disponibles</p>
     </div>
     <div className='mt-14'>

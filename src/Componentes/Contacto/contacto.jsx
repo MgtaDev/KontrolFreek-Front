@@ -7,7 +7,7 @@ export default function Contacto() {
     
 
 return (
-<section class="text-gray-600 body-font relative">
+<section id='contacto' class="text-gray-600 body-font relative">
   <div class="container px-5 py-24 mx-auto">
     <div class="flex flex-col text-center w-full mb-12">
     <h1 className={`text-5xl ${isDarkMode && 'text-white'} text-gray-500 mx-4 mb-4 md:mx-0 text-center md:text-5xl md:text-left`}>Contactanos</h1>

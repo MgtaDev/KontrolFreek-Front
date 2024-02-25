@@ -9,6 +9,8 @@ import WhatsappIcon from './assets/social.png'
 import DarkModeContext from './Context/darkModeContext';
 import { BsMoon, BsSun, BsWhatsapp } from "react-icons/bs";
 import Productos from './Views/Productos/productos';
+import Nosotros from './Views/Nosotros/Nosotros';
+import ComicShowcase from './Views/ComicShowCase/comicShowcase';
 
 export default function App() {
   const location = useLocation()
@@ -29,9 +31,11 @@ export default function App() {
          }
       <Routes>
         <Route exact path="/" element={<LandingPage />} />
+        <Route path="/nosotros" element={<Nosotros />} />
+        <Route path="/productos" element={<Productos />} />
         <Route path="/player/comic/cap-1" element={<Player isZ={isZ} />} />
+        <Route path="/comic/showcase" element={<ComicShowcase isZ={isZ} />} />
         <Route path="/skimofans" element={<SkimoFans />} />
-        <Route path="/products" element={<Productos />} />
         
       </Routes>
       <button
