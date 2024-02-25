@@ -1,10 +1,7 @@
 import React, { useContext, useState } from 'react'
 import DarkModeContext from '../../Context/darkModeContext'
-import img3 from '../../assets/Skimo3.jpeg'
-import { useNavigate } from 'react-router-dom'
 
-export default function Accordion1({title, message}) {
-  const navigate = useNavigate()
+export default function Accordion2({title, message}) {
 
     const [accordeonIsOpen, setaccordeonIsOpen] = useState(false)
     const { isDarkMode } = useContext(DarkModeContext) 
@@ -42,16 +39,8 @@ export default function Accordion1({title, message}) {
     </button>
     <div className={`grid overflow-hidden transition-all ${isDarkMode && 'bg-gray-200'} bg-gray-100 py-1 ${accordeonIsOpen ? 'md:pb-6' : ''}  rounded-b-lg px-4 duration-300 ease-in-out text-slate-600 text-sm
     ${accordeonIsOpen ? 'grid-rows-[1fr] opacity:100 ' : 'grid-rows-[0fr] opacity:0 '}`}>
-        <div className='flex overflow-hidden'>
-        <img src={img3} className='h-20 w-20 mx-4 my-1 rounded-lg'  alt="" />
-        <div className='flex flex-col '>
-        <div className='overflow-hidden'>{message}</div>
-        <button onClick={()=> navigate('/player/comic/cap-1')} className='bg-pink-500 relative right-1 my-4 w-full hover:bg-pink-600 duration-300 px-5 py-2.5 font-sans rounded-md text-white md:w-auto'>
-            Ver ahora
-        </button>
-        </div>
-     
-        </div>
+        
+        <div className='overflow-hidden' >{message}</div>
     </div>
     </div>
   )

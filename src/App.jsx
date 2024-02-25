@@ -8,7 +8,7 @@ import {Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import WhatsappIcon from './assets/social.png'
 import DarkModeContext from './Context/darkModeContext';
 import { BsMoon, BsSun, BsWhatsapp } from "react-icons/bs";
-import About from './Views/Nosotros/about';
+import Productos from './Views/Productos/productos';
 
 export default function App() {
   const location = useLocation()
@@ -29,9 +29,10 @@ export default function App() {
          }
       <Routes>
         <Route exact path="/" element={<LandingPage />} />
-        <Route path="/Player" element={<Player isZ={isZ} />} />
-        <Route path="/Skimofans" element={<SkimoFans />} />
-        <Route path="/About" element={<About />} />
+        <Route path="/player/comic/cap-1" element={<Player isZ={isZ} />} />
+        <Route path="/skimofans" element={<SkimoFans />} />
+        <Route path="/products" element={<Productos />} />
+        
       </Routes>
       <button
       className={`fixed bottom-6 right-5 bg-white  w-[3.5rem] h-[3.4rem] bg-opacity-80 backdrop-blur-[0.5rem] border-2 border-opacity-40 shadow-2xl rounded-full flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all ${isDarkMode && '!bg-gray-900 !border-1 !border-gray-100 text-white'}`}

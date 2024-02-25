@@ -31,10 +31,10 @@ export default function Nav({isZ, setisZ}) {
                         <a className='hover:text-pink-500' href='#about'>Nosotros</a>
                     </li>
                     <li>
-                        <a className='hover:text-pink-500' href='http://localhost:5173/#products'>Productos</a>
+                        <a className='hover:text-pink-500' href='/products'>Productos</a>
                     </li>
                     <li>
-                        <a className='hover:text-pink-500' href='/Player'>Comic</a>
+                        <a className='hover:text-pink-500' href='#comic'>Comic</a>
                     </li>
                     <li>
                         <a className='hover:text-pink-500' href='/skimofans'>SkimoFans</a>

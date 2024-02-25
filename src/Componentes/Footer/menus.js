@@ -1,22 +1,24 @@
 export const PRODUCTOS = [
-{name: 'Helado skimo', link: '/'},
-{name: 'Helado skimo', link: '/'},
-{name: 'Helado skimo', link: '/'}    
+{name: 'Helado 1', link: '/'},
+{name: 'Helado 2', link: '/'},
+{name: 'Helado 3', link: '/'},
+{name: 'Helado 4', link: '/'}    
+
 ]
 export const NOSOTROS = [
-    {name: 'Helado skimo', link: '/'},
-    {name: 'Helado skimo', link: '/'},
-    {name: 'Helado skimo', link: '/'}    
+    {name: 'Como contactarnos', link: '/'},
+    {name: 'Plascan', link: '/'},
+    {name: 'Comic', link: '/'}    
     ]
     export const COMIC = [
-        {name: 'Helado skimo', link: '/'},
-        {name: 'Helado skimo', link: '/'},
-        {name: 'Helado skimo', link: '/'}    
+        {name: 'Capitulo 1', link: '/'},
+        {name: 'Capitulo 2', link: '/'},
+        {name: 'Capitulo 3', link: '/'}    
         ]
         export const CONTACTO = [
-            {name: 'Helado skimo', link: '/'},
-            {name: 'Helado skimo', link: '/'},
-            {name: 'Helado skimo', link: '/'}    
+            {name: 'Instagram', link: '/'},
+            {name: 'Whatsapp', link: '/'},
+            {name: 'Facebook', link: '/'}    
             ]
             export const Icons = [
                 {name: 'logo-facebook', link: '/'},
