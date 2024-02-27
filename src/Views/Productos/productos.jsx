@@ -1,57 +1,25 @@
-import React, { useContext, useState } from 'react';
-import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
-import { RxDotFilled } from 'react-icons/rx';
-import img from '../../assets/Skimo1.jpeg'
-import img2 from '../../assets/Skimo2.jpeg'
-import img3 from '../../assets/Skimo3.jpeg'
-import img4 from '../../assets/Skimo4.jpeg'
+import React, { useContext, useEffect, useState } from 'react';
 import DarkModeContext from '../../Context/darkModeContext';
-import DownloadButton from '../../Componentes/Descarga/Descarga';
-import ChaptersSection from '../../Componentes/CapiitulosShowCase/capsShowCase';
+import axios from 'axios'
 
 function Productos({isZ}) {
-  const { isDarkMode } = useContext(DarkModeContext) 
+  const { isDarkMode } = useContext(DarkModeContext)
+  const [backendProducts, setBackendProducts] = useState([])
+  useEffect(() => {
+    axios('http://localhost:3001/products')
+      .then((response) => {
+        setBackendProducts(response.data);
+        console.log('Respuesta exitosa:', response.data);
+      })
+      .catch((error) => {
+        // Maneja el error aquí
+        console.error('Error al realizar la solicitud:', error);
+      });
+  }, []); // No hay ninguna dependencia aquí
+ 
+
+  console.log(backendProducts);
   console.log(isZ);
-  const slides = [
-    {
-      url: img,
-    },
-    {
-      url: img2,
-    },
-    {
-      url: img3,
-    },
-    {
-      url: img4,
-    },
-    
-  ];
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const prevSlide = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
-  };
-
-  const nextSlide = () => {
-    const isLastSlide = currentIndex === slides.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
-  };
-
-  const goToSlide = (slideIndex) => {
-    setCurrentIndex(slideIndex);
-  };
-
-  const products = [
-    {producto1: ''},
-    {producto2: ''},
-    {producto3: ''},
-    {producto4: ''},
-  ]
 
   return (
     <div className={`${isDarkMode && 'bg-gray-900'}`}>
@@ -67,15 +35,15 @@ function Productos({isZ}) {
     <div className='mb-20'>
 
     <div className='grid grid-cols-2 mt-2'>
-    {products && (
-        products.map((product)=>(
-            <div className=' m-4 rounded-xl shadow-xl '>
-                <img src={img2} className='rounded-t-xl' alt="" />
+    {backendProducts && (
+        backendProducts.map((product)=>(
+            <div key={product.id} className=' m-4 rounded-xl shadow-xl '>
+                <img src={product.image} className='rounded-t-xl' alt="" />
                 <p className='mx-2 mt-2 capitalize text-1xl text-gray-70'>
-                    producto 1
+                {product.name}
                 </p>
                 <p className='mx-2 my-2 capitalize text-1xl text-gray-500'>
-                2.99$
+                {product.price}
                 </p>
             </div>
         ))

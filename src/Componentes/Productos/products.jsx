@@ -5,10 +5,12 @@ import "slick-carousel/slick/slick-theme.css";
 import skimo1 from '../../assets/Skimo4.jpeg'
 import {FaArrowLeft, FaArrowRight} from 'react-icons/fa'
 import DarkModeContext from '../../Context/darkModeContext';
+import axios from 'axios'
 
   
-export default function Products({title, data}) {
-  const { isDarkMode } = useContext(DarkModeContext) 
+export default function Products() {
+  const backendProducts = axios('http://localhost:3001/products')
+  const { isDarkMode } = useContext(DarkModeContext)
   const sendWhatsappMessage = () => {
     window.open("https://wa.me/584121968978", "_blank")
   };
@@ -86,7 +88,7 @@ export default function Products({title, data}) {
           })}
         </Slider>
     <div className='flex justify-center mt-12 md:mt-0'>
-    <button onClick={()=>navigate('/Player')} className='md:mt-10 bg-pink-500 hover:bg-pink-600 duration-300 px-5 py-2.5 font-sans rounded-md text-white md:w-auto'>
+    <button onClick={()=>navigate('/products')} className='md:mt-10 bg-pink-500 hover:bg-pink-600 duration-300 px-5 py-2.5 font-sans rounded-md text-white md:w-auto'>
             Ver mas
     </button>
     </div>

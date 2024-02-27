@@ -5,16 +5,12 @@ import ComicPromo from '../../Componentes/ComicPromo/comicPromo'
 import Faqs from '../../Componentes/Faqs/faqs'
 import DarkModeContext from '../../Context/darkModeContext'
 import Contacto from '../../Componentes/Contacto/contacto'
-const productsData = [
-  {url:"https://www.wanderon.in/triplist/meghalaya-road-trip/wanderon-meghalaya-1.jpg"},
-  {url:"https://www.wanderon.in/triplist/bir-kasol-kheerganga/wanderon-kasol-1.jpg"},
-  {url:"https://www.wanderon.in/triplist/kasol-kheerganga-manali/wanderon-manali-1.jpg"},
-  {url:"https://www.wanderon.in/triplist/parvati-valley-summer/wanderon-parvati-1.jpg"},
-  {url:"https://www.wanderon.in/triplist/spiti-summer/wanderon-spiti-1.jpg"},
-  {url:"https://www.wanderon.in/triplist/spiti-circuit-biking/wanderon-spiti-18.jpg"},
-  {url:"https://www.wanderon.in/triplist/manali-leh-manali/wanderon-ladakh-1.jpg"},
-]  
+import axios from 'axios'
+
+
+
 export default function LandingPage() {
+  const productsData = axios('http://localhost:3001/products')
   const { isDarkMode } = useContext(DarkModeContext) 
   return (
     <div className={` ${isDarkMode && 'text-white bg-gray-900'}`}>
