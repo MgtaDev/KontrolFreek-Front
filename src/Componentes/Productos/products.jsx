@@ -6,10 +6,12 @@ import skimo1 from '../../assets/Skimo4.jpeg'
 import {FaArrowLeft, FaArrowRight} from 'react-icons/fa'
 import DarkModeContext from '../../Context/darkModeContext';
 import axios from 'axios'
+import { InView, useInView } from 'react-intersection-observer';
+import { inView, motion } from "framer-motion" 
 
   
-export default function Products() {
-  const backendProducts = axios('http://localhost:3001/products')
+export default function Products({title, data}) {
+ 
   const { isDarkMode } = useContext(DarkModeContext)
   const sendWhatsappMessage = () => {
     window.open("https://wa.me/584121968978", "_blank")
@@ -65,7 +67,16 @@ export default function Products() {
     <h2 className={`text-5xl ${isDarkMode && 'text-white'} text-gray-500 mx-10 text-center md:text-5xl mt-20 md:mt-60`}>Nuestros Ice Pops</h2>
     {/* Desktop Slider */}
     <div className={`mt-4 justify-center`}>
-        <Slider {...settings} className="">
+    <InView threshold={0.25}>
+            {({ref, inView})=>(
+            <motion.div 
+            ref={ref}
+            initial={{ x: -100, opacity: 0 }}
+            animate={ inView ? { x: 0, opacity: 1} : {x:-100}}
+            transition={{duration: 0.8}}
+            id=''
+            >
+     <Slider {...settings} className="">
           {data.map((item, index) => {
             return (
               <div
@@ -87,6 +98,11 @@ export default function Products() {
             );
           })}
         </Slider>
+       
+            </motion.div>
+            )}
+            </InView>
+    
     <div className='flex justify-center mt-12 md:mt-0'>
     <button onClick={()=>navigate('/products')} className='md:mt-10 bg-pink-500 hover:bg-pink-600 duration-300 px-5 py-2.5 font-sans rounded-md text-white md:w-auto'>
             Ver mas

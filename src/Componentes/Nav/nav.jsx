@@ -8,6 +8,7 @@ import DarkModeContext from '../../Context/darkModeContext'
 export default function Nav({isZ, setisZ}) {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const { isDarkMode } = useContext(DarkModeContext) 
+
     const onToggleMenu = () => {
         setIsMenuOpen(!isMenuOpen)
         setisZ(!isZ)
@@ -17,8 +18,8 @@ export default function Nav({isZ, setisZ}) {
       };
 
   return (
-    <header className={`bg-[rgb(254,253,253)] shadow-2xl ${isDarkMode && 'text-white bg-gray-900'}`}>
-        <nav className='flex justify-between items-center py-4 w-[92%] mx-auto' >
+    <header className={`bg-[rgb(254,253,253)]  shadow-2xl ${isDarkMode  && 'text-white bg-gray-900'}`}>
+        <nav className='flex justify-between items-center py-4 w-[92%] mx-auto ' >
             <div>
             <h1 className='text-4xl font-semibold md:text-5xl text-pink-500'>SKIMO</h1>
             </div>
@@ -40,7 +41,7 @@ export default function Nav({isZ, setisZ}) {
                         <a className='hover:text-pink-500' href='/skimofans'>SkimoFans</a>
                     </li>
                     <li>
-                        <a className='hover:text-pink-500' href='/#contacto'>Contacto</a>
+                        <a className='hover:text-pink-500' href='http://localhost:5173/#contacto'>Contacto</a>
                     </li>
                 </ul>
             </div>

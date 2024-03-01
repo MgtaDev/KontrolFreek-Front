@@ -3,6 +3,7 @@ import ItemsContainer from './itemsContainer'
 import {Icons} from './menus'
 import SocialIcons from './socialIcons'
 import DarkModeContext from '../../Context/darkModeContext'
+import { InView, useInView } from 'react-intersection-observer';
 
 export default function Footer() {
   const { isDarkMode } = useContext(DarkModeContext) 

@@ -1,23 +1,35 @@
 import React, { useContext } from 'react'
 import skimo from '../../assets/Skimo4.jpeg'
 import DarkModeContext from '../../Context/darkModeContext'
+import { InView, useInView } from 'react-intersection-observer';
+import { inView, motion } from "framer-motion" 
 
 
 export default function Nosotros() {
     const { isDarkMode } = useContext(DarkModeContext) 
   return (
-    <>
-    <img src={skimo} className='md:w-full md:h-[600px]' alt="" />
+    <div className={`${isDarkMode && ' bg-gray-900'}`}>
+  
 
     {/* Nosotros */}
-    <section class="text-gray-600 body-font">
+    <InView threshold={0.25}>
+            {({ref, inView})=>(
+            <motion.div 
+            ref={ref}
+            initial={{ x: -100, opacity: 0 }}
+            animate={ inView ? { x: 0, opacity: 1} : {x:-100}}
+            transition={{duration: 0.8}}
+            id=''
+            >
+                <img src={skimo} className='md:w-full md:h-[600px]' alt="" />
+     <section class={`text-gray-600 body-font ${isDarkMode && ' bg-gray-900'}`}>
   <div class="container px-5 py-10 mx-auto">
     <div class="flex flex-wrap w-full mb-20">
-      <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
-      <h1 className={`text-5xl ${isDarkMode && 'text-white'} text-gray-500 mx-4 mb-4 md:mx-0 text-center md:text-5xl md:text-left`}>Sobre Nosotros</h1>      
+      <div class={`lg:w-1/2 w-full mb-6 lg:mb-0`}>
+      <h1 className={`${isDarkMode && '!text-white'} text-5xl  text-gray-500 mx-4 mb-4 md:mx-0 text-center md:text-5xl md:text-left`}>Sobre Nosotros</h1>      
         <div class="h-1 w-full bg-pink-500 rounded"></div>
       </div>
-      <p class="lg:w-1/2 w-full leading-relaxed text-center text-gray-500">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom prism food truck ugh squid celiac humblebrag.</p>
+      <p class={`${isDarkMode && '!text-white'} lg:w-1/2 w-full leading-relaxed text-center text-gray-500`}>Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom prism food truck ugh squid celiac humblebrag.</p>
     </div>
     <div class="flex flex-wrap -m-4">
       <div class="xl:w-1/4 md:w-1/2 p-4">
@@ -42,12 +54,27 @@ export default function Nosotros() {
   </div>
     </section>
 
+            </motion.div>
+            )}
+    </InView>
+
+
     {/* Por que esocojernos */}
-    <section class="text-gray-600 body-font">
+    <InView threshold={0.25}>
+            {({ref, inView})=>(
+            <motion.div 
+            ref={ref}
+            initial={{ x: -100, opacity: 0 }}
+            animate={ inView ? { x: 0, opacity: 1} : {x:-100}}
+            transition={{duration: 0.8}}
+            id=''
+            >
+              
+      <section class={`${isDarkMode && ' bg-gray-900'} text-gray-600 body-font`}>
   <div class="container px-5 py-24 mx-auto">
     <div class="text-center mb-20">
     <h1 className={`text-5xl ${isDarkMode && 'text-white'} text-gray-500 mx-4 mb-4 md:mx-0 text-center md:text-5xl md:text-left`}>Por que esocojernos?</h1>      
-      <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug.</p>
+      <p class={`${isDarkMode && '!text-white'} text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s`}>Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug.</p>
       <div class="flex mt-6 justify-center">
         <div class="w-16 h-1 rounded-full bg-pink-500 inline-flex"></div>
       </div>
@@ -60,8 +87,8 @@ export default function Nosotros() {
           </svg>
         </div>
         <div class="flex-grow">
-          <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Shooting Stars</h2>
-          <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS try-hard.</p>
+          <h2 class={`${isDarkMode && '!text-white'} text-gray-900 text-lg title-font font-medium mb-3`}>Shooting Stars</h2>
+          <p class={`${isDarkMode && '!text-white'} leading-relaxed text-base`}>Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS try-hard.</p>
           <a class="mt-3 text-pink-500 inline-flex items-center">Learn More
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -78,8 +105,8 @@ export default function Nosotros() {
           </svg>
         </div>
         <div class="flex-grow">
-          <h2 class="text-gray-900 text-lg title-font font-medium mb-3">The Catalyzer</h2>
-          <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS try-hard.</p>
+          <h2 class={`${isDarkMode && '!text-white'} text-gray-900 text-lg title-font font-medium mb-3`}>The Catalyzer</h2>
+          <p class={`${isDarkMode && '!text-white'} leading-relaxed text-base`}>Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS try-hard.</p>
           <a class="mt-3 text-pink-500 inline-flex items-center">Learn More
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -95,8 +122,8 @@ export default function Nosotros() {
           </svg>
         </div>
         <div class="flex-grow">
-          <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Neptune</h2>
-          <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS try-hard.</p>
+          <h2 class={`${isDarkMode && '!text-white'} text-gray-900 text-lg title-font font-medium mb-3`}>Neptune</h2>
+          <p class={`${isDarkMode && '!text-white'} leading-relaxed text-base`}>Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS try-hard.</p>
           <a class="mt-3 text-pink-500 inline-flex items-center">Learn More
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -107,8 +134,12 @@ export default function Nosotros() {
     </div>
     <button class="flex mx-auto mt-16 text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg">Quiero comprar</button>
   </div>
-</section>
-    </>
+    </section>
+            </motion.div>
+            )}
+    </InView>
+   
+    </div>
   
   )
 }
