@@ -60,7 +60,7 @@ export default function Social({title, data}) {
     </InView>
 
 </section>
-<button class="flex mx-auto  text-white bg-pink-600 border-0 py-2 px-5 focus:outline-none hover:bg-pink-600 rounded">Ir a instagram</button>
+<button class="flex mx-auto  text-white bg-[rgb(95,96,188)]-600 border-0 py-2 px-5 focus:outline-none hover:bg-[rgb(95,96,188)]-600 rounded">Ir a instagram</button>
 
     </div>
       </>

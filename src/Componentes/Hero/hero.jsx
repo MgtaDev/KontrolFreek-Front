@@ -1,5 +1,7 @@
 import React, { useContext, useState } from 'react'
-import skimo from '../../assets/Skimo4.jpeg'
+import Banner from '../../assets/Banner3.webp'
+import Banner2 from '../../assets/Banner.jpeg'
+import Banner3 from '../../assets/Banner2.webp'
 import DarkModeContext from '../../Context/darkModeContext'
 import { inView, motion } from "framer-motion" 
 import { InView, useInView } from 'react-intersection-observer';
@@ -9,7 +11,7 @@ export default function Hero() {
 
   return (
     <div className={` ${isDarkMode && 'text-white bg-gray-900'}`}>
-    <img src={skimo} className='md:w-full w-auto md:h-[600px]' alt="" />
+    <img src={Banner} className='md:w-full w-auto md:h-[600px]' alt="" />
     <div className='grid cols-1 md:grid-cols-2 md:mx-8 mt-5 md:mt-20'>
     <div className='mt-4  md:mt-8 md:mx-8'>
       {/* h2 */}
@@ -22,7 +24,7 @@ export default function Hero() {
             transition={{duration: 0.8}}
             id=''
             >
-    <h2 className={`text-5xl ${isDarkMode && 'text-white'} text-gray-500 mx-4 mb-4 md:mx-0 text-center md:text-5xl md:text-left`}>Bienvenido a Skimo</h2>
+    <h2 className={`text-5xl ${isDarkMode && 'text-white'} text-gray-500 mx-4 mb-4 md:mx-0 text-center md:text-5xl md:text-left`}>Bienvenido a KontrolFreek</h2>
        
             </motion.div>
             )}
@@ -56,11 +58,19 @@ export default function Hero() {
             id=''
             >
             <div className='right'>
-            <img src={skimo} className='mt-5  md:rounded-lg shadow-xl' alt="" />
+            <img src={Banner} className='mt-5  md:rounded-lg shadow-xl' alt="" />
+            </div>
+            <div className='right'>
+            <img src={Banner2} className='mt-5  md:rounded-lg shadow-xl' alt="" />
+            </div>
+            <div className='right'>
+            <img src={Banner3} className='mt-5  md:rounded-lg shadow-xl' alt="" />
             </div>
             </motion.div>
             )}
             </InView>
+
+            
     </div>
     </div>
   )

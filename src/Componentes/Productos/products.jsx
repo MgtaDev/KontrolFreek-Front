@@ -5,13 +5,14 @@ import "slick-carousel/slick/slick-theme.css";
 import skimo1 from '../../assets/Skimo4.jpeg'
 import {FaArrowLeft, FaArrowRight} from 'react-icons/fa'
 import DarkModeContext from '../../Context/darkModeContext';
+import KennyKontrolFreeks from '../../assets/KennyKontrolFreeks.png'
 import axios from 'axios'
 import { InView, useInView } from 'react-intersection-observer';
 import { inView, motion } from "framer-motion" 
 
   
 export default function Products({title, data}) {
- 
+ console.log(data);
   const { isDarkMode } = useContext(DarkModeContext)
   const sendWhatsappMessage = () => {
     window.open("https://wa.me/584121968978", "_blank")
@@ -64,7 +65,7 @@ export default function Products({title, data}) {
     
   return (
     <div className='flex flex-col justify-center'>
-    <h2 className={`text-5xl ${isDarkMode && 'text-white'} text-gray-500 mx-10 text-center md:text-5xl mt-20 md:mt-60`}>Nuestros Ice Pops</h2>
+    <h2 className={`text-5xl ${isDarkMode && 'text-white'} text-gray-500 mx-10 text-center md:text-5xl mt-20 md:mt-60`}>Nuestros Thumbsticks</h2>
     {/* Desktop Slider */}
     <div className={`mt-4 justify-center`}>
     <InView threshold={0.25}>
@@ -80,16 +81,38 @@ export default function Products({title, data}) {
           {data.map((item, index) => {
             return (
               <div
-              className=""
+              className="hover:scale-110 transition duration-3s"
               key={index}>
                 
 
-                <img src={skimo1} alt="hero_img" />
+                <img src={item.image} alt="hero_img" />
               
-                <div className=" text-center  text-1xl md:text-3xl">
-                  <p>Skimo Ice</p>
+                <div className=" text-center  text-1xl md:text-2xl">
+                  <p>{item.name}</p>
 
-                  <p className={`${isDarkMode && 'text-gray-100'} text-gray-500`}>1.99$</p>
+                  <p className={`${isDarkMode && 'text-gray-100'} text-gray-500`}>18.99$</p>
+                </div>
+
+
+                
+              </div>
+            );
+          })}
+        </Slider>
+        <Slider {...settings} className="">
+          {data.map((item, index) => {
+            return (
+              <div
+              className="hover:scale-110 transition duration-3s"
+              key={index}>
+                
+
+                <img src={item.image} alt="hero_img" />
+              
+                <div className=" text-center  text-1xl md:text-2xl">
+                  <p>{item.name}</p>
+
+                  <p className={`${isDarkMode && 'text-gray-100'} text-gray-500`}>18.99$</p>
                 </div>
 
 
@@ -104,7 +127,7 @@ export default function Products({title, data}) {
             </InView>
     
     <div className='flex justify-center mt-12 md:mt-0'>
-    <button onClick={()=>navigate('/products')} className='md:mt-10 bg-pink-500 hover:bg-pink-600 duration-300 px-5 py-2.5 font-sans rounded-md text-white md:w-auto'>
+    <button onClick={()=>navigate('/products')} className='md:mt-10 bg-[rgb(95,96,188)]-500 hover:bg-[rgb(95,96,188)]-600 duration-300 px-5 py-2.5 font-sans rounded-md text-white md:w-auto'>
             Ver mas
     </button>
     </div>

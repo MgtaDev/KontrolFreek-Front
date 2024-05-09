@@ -12,7 +12,7 @@ export default function Accordion({title, message}) {
     <button onClick={()=> setaccordeonIsOpen(!accordeonIsOpen)} className={`flex ${isDarkMode && 'bg-gray-200'} bg-gray-100 shadow-xl py-2 md:py-3 items-center px-4 rounded-t-lg justify-between w-full`}>
         <span className='text-left font-semibold text-gray-700 md:text-lg'>{title}</span>
         <svg
-          className="fill-pink-500 shrink-0 ml-8"
+          className="fill-[rgb(95,96,188)] shrink-0 ml-8"
           width="16"
           height="16"
           xmlns="http://www.w3.org/2000/svg"

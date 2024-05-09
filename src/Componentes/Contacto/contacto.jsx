@@ -23,7 +23,7 @@ return (
         <section  class="text-gray-600 body-font relative">
           <div id='#contacto' class="container px-5 py-24 mx-auto">
             <div class="flex flex-col text-center w-full mb-12">
-              <h1 className={`text-5xl ${isDarkMode && 'text-white'} text-gray-500 mx-4 mb-4 md:mx-0 text-center md:text-5xl md:text-left`}>Contactanos</h1>
+              <h1 className={`text-5xl ${isDarkMode && 'text-white'} text-gray-500 mx-4 mb-4 md:mx-0 text-center md:text-5xl md:text-left lg:text-center`}>Contactanos</h1>
               <p class={`lg:w-2/3 mx-auto leading-relaxed text-base ${isDarkMode && '!text-white'} `}>Tienes otra duda o quieres contactar con soporte? Envianos un correo electronico</p>
             </div>
             <div class="lg:w-1/2 md:w-2/3 mx-auto">
@@ -47,7 +47,7 @@ return (
                   </div>
                 </div>
                 <div class="p-2 w-full">
-                  <button class="flex mx-auto text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Enviar</button>
+                  <button class="flex mx-auto text-white bg-[rgb(95,96,188)]-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Enviar</button>
                 </div>
               
                 <div class={`p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center ${isDarkMode && '!text-white'} `}>
@@ -60,7 +60,7 @@ return (
             transition={{duration: 0.8}}
             id=''
             >
-  <a class="text-pink-400">skimo@gmail.com</a>
+  <a class="text-[rgb(95,96,188)]">freeks4life@gmail.com</a>
                   <p class="leading-normal my-5">Nueva esparta, Venezuela
                     <br />Porlamar, PO 6301
                   </p>

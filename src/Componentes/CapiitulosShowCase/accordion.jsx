@@ -46,7 +46,7 @@ export default function Accordion1({title, message}) {
         <img src={img3} className='h-20 w-20 mx-4 my-1 rounded-lg'  alt="" />
         <div className='flex flex-col '>
         <div className='overflow-hidden'>{message}</div>
-        <button onClick={()=> navigate('/player/comic/cap-1')} className='bg-pink-500 relative right-1 my-4 w-full hover:bg-pink-600 duration-300 px-5 py-2.5 font-sans rounded-md text-white md:w-auto'>
+        <button onClick={()=> navigate('/player/comic/cap-1')} className='bg-[rgb(95,96,188)]-500 relative right-1 my-4 w-full hover:bg-[rgb(95,96,188)]-600 duration-300 px-5 py-2.5 font-sans rounded-md text-white md:w-auto'>
             Ver ahora
         </button>
         </div>

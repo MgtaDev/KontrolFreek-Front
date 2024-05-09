@@ -66,7 +66,7 @@ setIsDownloadModalOpen(false)
 
   return (
     <div className='mb-20'>
-      <button className="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded" onClick={handleDownloadPDF}>
+      <button className="bg-[rgb(95,96,188)]-500 hover:bg-[rgb(95,96,188)]-700 text-white font-bold py-2 px-4 rounded" onClick={handleDownloadPDF}>
         Descargar PDF
       </button>
 
@@ -108,7 +108,7 @@ setIsDownloadModalOpen(false)
                 }
                  className="w-full p-2 border border-gray-300 rounded" type="tel" id="phone" required />
               </div>
-              <button className="bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded w-full" type="submit">Enviar datos</button>
+              <button className="bg-[rgb(95,96,188)]-500 hover:bg-[rgb(95,96,188)]-600 text-white font-bold py-2 px-4 rounded w-full" type="submit">Enviar datos</button>
             </form>
             <button className="block w-full mt-4 bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-2 px-4 rounded" onClick={handleCloseModal}>
               Cerrar
@@ -123,7 +123,7 @@ setIsDownloadModalOpen(false)
             <p className='mb-4'>
               Hemos recibido sus datos. Para descargar el PDF, haga clic en el botón a continuación.
             </p>
-            <button onClick={showDownloadAlert} className='bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded w-full'>
+            <button onClick={showDownloadAlert} className='bg-[rgb(95,96,188)]-500 hover:bg-[rgb(95,96,188)]-600 text-white font-bold py-2 px-4 rounded w-full'>
              <a href='../../assets/Elviajedeskimo.pdf' download={true}>
              Descargar PDF
               </a> 

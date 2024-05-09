@@ -163,7 +163,7 @@ function Productos({isZ}) {
               setSelectedPage(number);
             }}
           className={`border-solid rounded-full border border-[255 255 255] px-3 py-1 mx-1 text-lg font-semibold text-slate-400 focus:text-slate-950 focus:border-white ${
-          selected ? "bg-pink-600 !text-white" : ""
+          selected ? "bg-[rgb(95,96,188)]-600 !text-white" : ""
             }`}
             >
               
