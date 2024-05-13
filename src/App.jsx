@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import Nav from './Componentes/Nav/nav'
 import Footer from './Componentes/Footer/footer'
-import Player from './Views/Player/player';
 import LandingPage from './Views/Landing/landingPage'
 import SkimoFans from './Views/SkimoFans/skimofans';
 import {Route, Routes, useLocation, useNavigate } from "react-router-dom";
