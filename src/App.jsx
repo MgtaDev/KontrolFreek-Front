@@ -33,7 +33,6 @@ export default function App() {
         <Route exact path="/" element={<LandingPage />} />
         <Route path="/nosotros" element={<Nosotros />} />
         <Route path="/productos" element={<Productos />} />
-        <Route path="/player/comic/cap-1" element={<Player isZ={isZ} />} />
         <Route path="/comic/showcase" element={<ComicShowcase isZ={isZ} />} />
         <Route path="/skimofans" element={<SkimoFans />} />
         
