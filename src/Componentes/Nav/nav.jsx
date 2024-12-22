@@ -49,7 +49,7 @@ export default function Nav({isZ, setisZ}) {
                 <ion-icon size='large' name='cart'></ion-icon>
 </button>
 
-<div id="hs-offcanvas-example" class="hs-overlay hs-overlay-open:translate-x-0 hidden -translate-x-full fixed top-0 start-0 transition-all duration-300 transform h-full max-w-xs w-full z-[80] bg-white border-e" role="dialog" tabindex="-1" aria-labelledby="hs-offcanvas-example-label">
+<div id="hs-offcanvas-right" class="hs-overlay hs-overlay-open:translate-x-0 hidden -translate-x-full fixed top-0 start-0 transition-all duration-300 transform h-full max-w-xs w-full z-[80] bg-white border-e" role="dialog" tabindex="-1" aria-labelledby="hs-offcanvas-example-label">
   <div class="flex justify-between items-center py-3 px-4 border-b dark:border-neutral-700">
     <h3 id="hs-offcanvas-example-label" class="font-bold text-gray-800">
      Carrito de compras
