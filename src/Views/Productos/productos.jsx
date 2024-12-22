@@ -99,7 +99,7 @@ function Productos({isZ}) {
       <h1 className={`${isDarkMode && 'text-white'} text-4xl font-semibold md:text-6xl md:mt-8  text-gray-400 mx-6 pt-8`}>Nuestros Productos</h1>
       <p className={`${isDarkMode && 'text-gray-300'} text-xl mt-2 mx-6 md:mt-3 md:text-2xl`}>Consulta nuestros productos disponibles</p>
     </div>
-    <div className='mt-16'>
+    <div className='mt-16 md:mx-16'>
 
 <select id="filter-select" class="border focus:ring-indigo-500 focus:border-indigo-500 mx-6 block w-40 pl-3 pr-10 py-2 text-base leading-6 bg-white border-gray-300 rounded-md shadow-sm">
   <option>Filtrar por...</option>

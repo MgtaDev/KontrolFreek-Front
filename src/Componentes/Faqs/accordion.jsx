@@ -9,7 +9,7 @@ export default function Accordion({title, message}) {
 
   return (
     <div className='py-0 '>
-    <button onClick={()=> setaccordeonIsOpen(!accordeonIsOpen)} className={`flex ${isDarkMode && 'bg-gray-200'} bg-gray-100 shadow-xl py-2 md:py-3 items-center px-4 rounded-t-lg justify-between w-full`}>
+    <button onClick={()=> setaccordeonIsOpen(!accordeonIsOpen)} className={`flex ${isDarkMode && 'bg-gray-200'} bg-gray-100 shadow-xl py-2 md:py-2 items-center px-4 rounded justify-between w-full md:w-[80%] md:justify-center md:flex mx-auto`}>
         <span className='text-left font-semibold text-gray-700 md:text-lg'>{title}</span>
         <svg
           className="fill-[rgb(95,96,188)] shrink-0 ml-8"

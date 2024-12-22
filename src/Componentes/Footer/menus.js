@@ -1,14 +1,14 @@
 export const PRODUCTOS = [
-{name: 'Performance Thumbsticks', link: '/'},
-{name: 'Controller Grips', link: '/'},
-{name: 'Gaming Cables', link: '/'},
-{name: 'Headsets', link: '/'}    
+{name: 'Producto 1', link: '/productos'},
+{name: 'Producto 1', link: '/productos'},
+{name: 'Producto 1', link: '/productos'},
+{name: 'Producto 1', link: '/productos'}    
 
 ]
 export const NOSOTROS = [
     {name: 'Como contactarnos', link: '/'},
-    {name: 'Ventajas ', link: '/'},
-    {name: 'Blog', link: '/'}    
+    {name: 'Ubicaciones ', link: '/'},
+    {name: 'Tienda', link: '/'}    
     ]
         export const CONTACTO = [
             {name: 'Instagram', link: '/'},

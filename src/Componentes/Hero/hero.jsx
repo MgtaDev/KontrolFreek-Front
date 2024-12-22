@@ -1,7 +1,5 @@
 import React, { useContext, useState } from 'react'
-import Banner from '../../assets/Banner3.webp'
-import Banner2 from '../../assets/Banner.jpeg'
-import Banner3 from '../../assets/Banner2.webp'
+import Banner from '../../assets/sex-shop-neon-sign-sex-shop-neon-sign-conceptual-d-rendering-illustration-133408232.webp'
 import DarkModeContext from '../../Context/darkModeContext'
 import { inView, motion } from "framer-motion" 
 import { InView, useInView } from 'react-intersection-observer';
@@ -11,7 +9,7 @@ export default function Hero() {
 
   return (
     <div className={` ${isDarkMode && 'text-white bg-gray-900'}`}>
-    <img src={Banner} className='md:w-full w-auto md:h-[600px]' alt="" />
+    <img src={Banner} className='md:w-full w-auto md:h-[650px]' alt="" />
     <div className='grid cols-1 md:grid-cols-2 md:mx-8 mt-5 md:mt-20'>
     <div className='mt-4  md:mt-8 md:mx-8'>
       {/* h2 */}
@@ -61,10 +59,10 @@ export default function Hero() {
             <img src={Banner} className='mt-5  md:rounded-lg shadow-xl' alt="" />
             </div>
             <div className='right'>
-            <img src={Banner2} className='mt-5  md:rounded-lg shadow-xl' alt="" />
+            <img src={Banner} className='mt-5  md:rounded-lg shadow-xl' alt="" />
             </div>
             <div className='right'>
-            <img src={Banner3} className='mt-5  md:rounded-lg shadow-xl' alt="" />
+            <img src={Banner} className='mt-5  md:rounded-lg shadow-xl' alt="" />
             </div>
             </motion.div>
             )}

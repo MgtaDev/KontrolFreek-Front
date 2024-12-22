@@ -10,10 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@preline/overlay": "^2.6.0",
     "axios": "^1.6.7",
     "file-url": "^4.0.0",
     "framer-motion": "^11.0.6",
     "js-file-download": "^0.4.12",
+    "preline": "^2.6.0",
     "react": "^18.2.0",
     "react-burger-menu": "^3.0.9",
     "react-card-slider-component": "^1.0.9",
@@ -29,6 +31,7 @@
     "styled-components": "^6.1.8"
   },
   "devDependencies": {
+    "@tailwindcss/forms": "^0.5.9",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
     "@vitejs/plugin-react": "^4.2.1",

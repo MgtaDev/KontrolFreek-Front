@@ -3,6 +3,7 @@ import HeroFans from '../../Componentes/HeroFans/herofans'
 import Social from '../../Componentes/SiguenosEnRedes/social'
 import DarkModeContext from '../../Context/darkModeContext'
 import { InView, useInView } from 'react-intersection-observer';
+import Contacto from '../../Componentes/Contacto/contacto';
 const productsData = [
   {url:"https://www.wanderon.in/triplist/meghalaya-road-trip/wanderon-meghalaya-1.jpg"},
   {url:"https://www.wanderon.in/triplist/bir-kasol-kheerganga/wanderon-kasol-1.jpg"},
@@ -17,7 +18,7 @@ export default function SkimoFans() {
 
   return (
     <div className={`${isDarkMode && 'bg-gray-900'}`}>
-      <HeroFans/>
+      <Contacto/>
       <Social title="Siguenos en Redes #Skimo" data={productsData}/>
     </div>
   )

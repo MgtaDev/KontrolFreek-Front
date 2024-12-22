@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import banner from '../../assets/Banner2.webp'
+import banner from '../../assets/sex-shop-neon-sign-sex-shop-neon-sign-conceptual-d-rendering-illustration-133408232.webp'
 import DarkModeContext from '../../Context/darkModeContext'
 import { InView, useInView } from 'react-intersection-observer';
 import { inView, motion } from "framer-motion" 
@@ -23,7 +23,7 @@ export default function Nosotros() {
             transition={{duration: 0.8}}
             id=''
             >
-                <img src={banner} className='md:w-full md:h-[600px]' alt="" />
+                <img src={banner} className='md:w-full md:h-[650px]' alt="" />
      <section class={`text-gray-600 body-font ${isDarkMode && ' bg-gray-900'}`}>
   <div class="container px-5 py-10 mx-auto">
     <div class="flex flex-wrap w-full mb-20">

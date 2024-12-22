@@ -13,18 +13,7 @@ import { InView, useInView } from 'react-intersection-observer';
 export default function LandingPage() {
   
   const [backendProducts, setBackendProducts] = useState([])
-  useEffect(() => {
-    axios('http://localhost:3001/products')
-      .then((response) => {
-        setBackendProducts(response.data);
-        console.log('Respuesta exitosa:', response.data);
-      })
-      .catch((error) => {
-        // Maneja el error aquí
-        console.error('Error al realizar la solicitud:', error);
-      });
-  }, []); // No hay ninguna dependencia aquí
-  const { isDarkMode } = useContext(DarkModeContext) 
+ 
 
   return (
     <div className={` ${isDarkMode && 'text-white bg-gray-900'}`}>
