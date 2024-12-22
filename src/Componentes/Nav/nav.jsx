@@ -48,16 +48,17 @@ export default function Nav({isZ, setisZ}) {
                     
                 <ion-icon size='large' name='search'></ion-icon>
             
-                <button type="button" class="inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent  text-white disabled:opacity-50 disabled:pointer-events-none" aria-haspopup="dialog" aria-expanded="false" aria-controls="hs-offcanvas-example" data-hs-overlay="#hs-offcanvas-example">
-                <ion-icon size='large' name='cart'></ion-icon>
+           
+<button type="button" class="inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent disabled:opacity-50 disabled:pointer-events-none" aria-haspopup="dialog" aria-expanded="false" aria-controls="hs-offcanvas-right" data-hs-overlay="#hs-offcanvas-right">
+<ion-icon size='large' name='cart'></ion-icon>
 </button>
 
-<div id="hs-offcanvas-right" class="hs-overlay hs-overlay-open:translate-x-0 hidden -translate-x-full fixed top-0 start-0 transition-all duration-300 transform h-full max-w-xs w-full z-[80] bg-white border-e" role="dialog" tabindex="-1" aria-labelledby="hs-offcanvas-example-label">
+<div id="hs-offcanvas-right" class="hs-overlay hs-overlay-open:translate-x-0 hidden translate-x-full fixed top-0 end-0 transition-all duration-300 transform h-full max-w-xs w-full z-[80] bg-white border-s" role="dialog" tabindex="-1" aria-labelledby="hs-offcanvas-right-label">
   <div class="flex justify-between items-center py-3 px-4 border-b dark:border-neutral-700">
-    <h3 id="hs-offcanvas-example-label" class="font-bold text-gray-800">
+    <h3 id="hs-offcanvas-right-label" class="font-bold text-gray-900">
      Carrito de compras
     </h3>
-    <button type="button" class="size-8 inline-flex justify-center items-center gap-x-2 rounded-full border border-transparent bg-gray-100 text-gray-800 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none " aria-label="Close" data-hs-overlay="#hs-offcanvas-example">
+    <button type="button" class="size-8 inline-flex justify-center items-center gap-x-2 rounded-full border border-transparent bg-gray-100 text-gray-800 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none " aria-label="Close" data-hs-overlay="#hs-offcanvas-right">
       <span class="sr-only">Close</span>
       <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M18 6 6 18"></path>
@@ -67,10 +68,11 @@ export default function Nav({isZ, setisZ}) {
   </div>
   <div class="p-4">
     <p class="text-gray-800 ">
-    Consulta aqui tu carrito de compras
+      Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
     </p>
   </div>
 </div>
+
                 </div>
                 <div onClick={onToggleMenu} className={`text-3xl text-white bg-black border-2 border-pink-600 pt-2 px-2 rounded-lg cursor-pointer md:hidden`}>
                 <ion-icon name={isMenuOpen ? 'close' : 'menu'} ></ion-icon>
