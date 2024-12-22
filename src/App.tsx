@@ -17,15 +17,13 @@ declare global {
     HSStaticMethods: IStaticMethods;
   }
 }
-const location = useLocation();
-
-useEffect(() => {
-  window.HSStaticMethods.autoInit();
-}, [location.pathname]);
-
 
 export default function App() {
   const location = useLocation()
+  useEffect(() => {
+    window.HSStaticMethods.autoInit();
+  }, [location.pathname]);
+  
   const [isZ, setisZ] = useState(false)
   const [isDarkMode, setisDarkMode] = useState(false)
   const sendWhatsappMessage = () => {
