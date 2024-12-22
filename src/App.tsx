@@ -1,16 +1,28 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Nav from './Componentes/Nav/nav'
 import Footer from './Componentes/Footer/footer'
 import LandingPage from './Views/Landing/landingPage'
 import SkimoFans from './Views/SkimoFans/skimofans';
 import {Route, Routes, useLocation, useNavigate } from "react-router-dom";
-import WhatsappIcon from './assets/social.png'
 import DarkModeContext from './Context/darkModeContext';
 import { BsMoon, BsSun, BsWhatsapp } from "react-icons/bs";
 import Productos from './Views/Productos/productos';
 import Nosotros from './Views/Nosotros/Nosotros';
 import ComicShowcase from './Views/ComicShowCase/comicShowcase';
 import social from './assets/social.png'
+import "preline/preline";
+import { IStaticMethods } from "preline/preline";
+declare global {
+  interface Window {
+    HSStaticMethods: IStaticMethods;
+  }
+}
+const location = useLocation();
+
+useEffect(() => {
+  window.HSStaticMethods.autoInit();
+}, [location.pathname]);
+
 
 export default function App() {
   const location = useLocation()
@@ -30,11 +42,11 @@ export default function App() {
             location.pathname !== "" ? <Nav isZ={isZ} setisZ={setisZ}/> : null
          }
       <Routes>
-        <Route exact path="/" element={<LandingPage />} />
+        <Route path="/" element={<LandingPage />} />
         <Route path="/nosotros" element={<Nosotros />} />
-        <Route path="/productos" element={<Productos />} />
-        <Route path="/preguntas-frecuentes" element={<ComicShowcase isZ={isZ} />} />
-        <Route path="/contacto" element={<SkimoFans />} />
+        <Route path="/productos" element={<Productos isZ={isZ} />} />
+        <Route path="/preguntas-frecuentes" element={<ComicShowcase  />} />
+        <Route path="/" element={<SkimoFans />} />
         
       </Routes>
       <button

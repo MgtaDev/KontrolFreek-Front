@@ -27,16 +27,19 @@ export default function Nav({isZ, setisZ}) {
                 <ul className='flex md:flex-row flex-col md:items-center md:gap-[4vw] text-white gap-6'>
                     
                     <li>
-                        <a className='hover:text-[rgb(95,96,188)]' href='/nosotros'>Nosotros</a>
+                        <a className='block md:hidden' href='/'>Inicio</a>
                     </li>
                     <li>
-                        <a className='hover:text-[rgb(95,96,188)]' href='/productos'>Catalogo</a>
+                        <a className='' href='/nosotros'>Nosotros</a>
                     </li>
                     <li>
-                        <a className='hover:text-[rgb(95,96,188)]' href='/preguntas-frecuentes'>Preguntas</a>
+                        <a className='' href='/productos'>Catalogo</a>
                     </li>
                     <li>
-                        <a className='hover:text-[rgb(95,96,188)]' href='/contacto'>Contacto</a>
+                        <a className='' href='/preguntas-frecuentes'>Preguntas</a>
+                    </li>
+                    <li>
+                        <a className='' href='/contacto'>Contacto</a>
                     </li>
                 </ul>
             </div>
