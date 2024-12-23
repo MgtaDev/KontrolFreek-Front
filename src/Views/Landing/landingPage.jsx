@@ -13,7 +13,6 @@ import { InView, useInView } from 'react-intersection-observer';
 export default function LandingPage() {
   
   const [backendProducts, setBackendProducts] = useState([])
- 
   const { isDarkMode } = useContext(DarkModeContext) 
   return (
     <div className={` ${isDarkMode && 'text-white bg-gray-900'}`}>
