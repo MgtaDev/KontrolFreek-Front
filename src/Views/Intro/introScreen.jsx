@@ -1,14 +1,14 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import logo from '../../assets/logo-movil-Photoroom.png'
-
+import background from '../../assets/sex-shop-neon-sign-sex-shop-neon-sign-conceptual-d-rendering-illustration-133408232.webp'
 const IntroScreen = () => {
   const cities = ['Caracas', 'Margarita', 'Valencia', 'Lecheria'];
   const navigate = useNavigate();
   return (
     <div className="relative h-screen w-screen"> {/* Contenedor principal para ocupar toda la pantalla */}
       <img
-        src="/src/assets/sex-shop-neon-sign-sex-shop-neon-sign-conceptual-d-rendering-illustration-133408232.webp" // Reemplaza con la ruta de tu imagen
+        src={background}
         alt="Background"
         className="absolute  h-full w-full object-cover" // Imagen de fondo que cubre todo
       />

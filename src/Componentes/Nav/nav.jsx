@@ -65,7 +65,6 @@ export default function Nav({isZ, setisZ}) {
            </div>
             <div className={`
                 md:static 
-                
                 bg-black 
                 absolute 
                 md:min-h-fit 
