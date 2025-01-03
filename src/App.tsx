@@ -12,6 +12,9 @@ import ComicShowcase from './Views/ComicShowCase/comicShowcase';
 import social from './assets/social.png'
 import "preline/preline";
 import { IStaticMethods } from "preline/preline";
+import Contacto from './Componentes/Contacto/contacto';
+import IntroScreen from './Views/Intro/introScreen';
+import Detail from './Views/Detail/detail';
 declare global {
   interface Window {
     HSStaticMethods: IStaticMethods;
@@ -37,22 +40,31 @@ export default function App() {
 
   
       {
-            location.pathname !== "" ? <Nav isZ={isZ} setisZ={setisZ}/> : null
+            location.pathname !== "/" ? <Nav isZ={isZ} setisZ={setisZ}/> : null
          }
       <Routes>
-        <Route path="/" element={<LandingPage />} />
+        <Route path="/" element={<IntroScreen/>} />
+        <Route path="/inicio" element={<LandingPage />} />
         <Route path="/nosotros" element={<Nosotros />} />
+        <Route path="/detalle" element={<Detail />} />
         <Route path="/productos" element={<Productos isZ={isZ} />} />
         <Route path="/preguntas-frecuentes" element={<ComicShowcase  />} />
-        <Route path="/" element={<SkimoFans />} />
+        <Route path="/contacto" element={<Contacto />} />
         
       </Routes>
-      <button
-      className={`fixed bottom-6 right-5 w-[3.5rem] h-[3.4rem] shadow-2xl rounded-full flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all ${isDarkMode && '!bg-gray-900 !border-1 !border-gray-100 text-white'}`}
-      onClick={()=> sendWhatsappMessage()}
-    >
-      <img src={social} alt="" />
-    </button>
+          
+      {
+            location.pathname !== "/" ? 
+            <button
+            className={`fixed bottom-6 right-5 w-[3.5rem] h-[3.4rem] shadow-2xl rounded-full flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all ${isDarkMode && '!bg-gray-900 !border-1 !border-gray-100 text-white'}`}
+            onClick={()=> sendWhatsappMessage()}
+          >
+            <img src={social} alt="" />
+          </button>   
+            : 
+            null
+         }
+     
       {/* <button
       className={`fixed bottom-6 left-5 bg-white  w-[3.5rem] h-[3.4rem] bg-opacity-80 backdrop-blur-[0.5rem] border-2 border-opacity-40 shadow-2xl rounded-full flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all ${isDarkMode && '!bg-gray-900 !border-1 !border-gray-100 text-white'}`}
       onClick={()=> setisDarkMode(!isDarkMode)}
@@ -61,7 +73,7 @@ export default function App() {
     </button> */}
      
       {
-            location.pathname !== "" ? <Footer /> : null
+            location.pathname !== "/" ? <Footer /> : null
          }
       </DarkModeContext.Provider>
     </div>

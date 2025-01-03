@@ -2,7 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-
+html{
+  background-image: url('assets/fondo.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
     *{
       @apply transition-colors
     }

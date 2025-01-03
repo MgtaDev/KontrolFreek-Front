@@ -7,6 +7,7 @@ import DarkModeContext from '../../Context/darkModeContext'
 import Contacto from '../../Componentes/Contacto/contacto'
 import axios from 'axios'
 import { InView, useInView } from 'react-intersection-observer';
+import Gallery1 from '../../Componentes/Gallery1/gallery'
 
 
 
@@ -18,8 +19,7 @@ export default function LandingPage() {
     <div className={` ${isDarkMode && 'text-white bg-gray-900'}`}>
       <Hero/>
       <Products title="Productos" data={backendProducts}/>
-      <ComicPromo/>
-      <Faqs/>
+      <Gallery1/>
       <Contacto/>
     </div>
   )
