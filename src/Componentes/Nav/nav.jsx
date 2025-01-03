@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import logo from '../../assets/Logo.jpeg'
+import logo from '../../assets/sexshop-logo.png'
 import DarkModeContext from '../../Context/darkModeContext'
 import { Link } from 'react-router-dom'
 
@@ -60,7 +60,7 @@ export default function Nav({isZ, setisZ}) {
          <nav className={`flex justify-between items-center gap-2 md:gap-4 py-4 w-full px-8 fixed z-50 bg-black shadow-lg shadow-black  ${isDarkMode ? 'bg-gray-900' : ''}`}> {/* Clases de tailwind */}
            
            <div className='flex items-center'>
-            <img src="/src/assets/sexshop-logo.png" className='bg-transparent -ml-4 w-14 md:w-10 md:h-10 mr-1 h-14' alt="" />
+            <img src={logo} className='bg-transparent -ml-4 w-14 md:w-10 md:h-10 mr-1 h-14' alt="" />
             <h3 className='text-white bg-black w-full text-3xl'>Sex <span className='text-red-500'>Shop</span></h3>
            </div>
             <div className={`
