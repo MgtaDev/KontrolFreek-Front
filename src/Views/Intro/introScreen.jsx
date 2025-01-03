@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import logo from '../../assets/logo-movil-Photoroom.png'
 
 const IntroScreen = () => {
   const cities = ['Caracas', 'Margarita', 'Valencia', 'Lecheria'];
@@ -13,7 +14,7 @@ const IntroScreen = () => {
       />
       <div className="absolute backdrop-blur-xl inset-0 flex flex-col items-center justify-center"> {/* Centra los botones */}
         <div className="p-8 rounded-lg"> {/* Contenedor con fondo semi-transparente */}
-        <img src="/src/assets/logo-movil-Photoroom.png" alt="Logo" className="w-60 h-60 mx-auto mb-4 object-cover" /> {/* Logo */}
+        <img src={logo} alt="Logo" className="w-60 h-60 mx-auto mb-4 object-cover" /> {/* Logo */}
           <h1 className="text-3xl font-bold mb-6 -mt-8 text-gray-300">Selecciona una Ciudad</h1> {/* Título */}
           <div className="flex flex-col space-y-4"> {/* Contenedor de botones verticales */}
             {cities.map((city) => (
